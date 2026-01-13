@@ -4,7 +4,7 @@
 
 ## 🔭 Currently working on
 
-I'm currently focused on homelab automation projects — building and automating services for my home lab using tools like Home Assistant, Ansible for provisioning, Kubernetes on bare metal, and automated backup/monitoring workflows. I enjoy creating reliable, repeatable automation to run self-hosted services and infrastructure.
+I'm currently focused on homelab automation projects — building and automating services for my home lab using tools like the *arr stack, proxmox, docker, and automated backup/monitoring workflows. I enjoy creating reliable, repeatable automation to run self-hosted services and infrastructure.
 
 ## 🛠️ Tech Stack (compact)
 
