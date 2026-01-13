@@ -2,6 +2,10 @@
   
 # 👋 Hey there, I'm Mayzr! 
 
+## 🔭 Currently working on
+
+I'm currently focused on homelab automation projects — building and automating services for my home lab using tools like Home Assistant, Ansible for provisioning, Kubernetes on bare metal, and automated backup/monitoring workflows. I enjoy creating reliable, repeatable automation to run self-hosted services and infrastructure.
+
 ## 🛠️ Tech Stack
 
 <div align="center">
@@ -26,6 +30,8 @@
 ### Database & Cloud
 ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Redis](https://img.shields.io/badge/-Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Oracle SQL](https://img.shields.io/badge/-Oracle%20SQL-F80000?style=for-the-badge&logo=oracle&logoColor=white)
+![SQL Server](https://img.shields.io/badge/-SQL%20Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
 ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 ### Tools & Others
@@ -73,7 +79,7 @@
 
 <div align="center">
   
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=MayzrDev&theme=react-dark&hide_border=true&bg_color=0D1117&color=6C63FF&line=6C63FF&point=FFFFFF)](https://github.com/MayzrDev)
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=MayzrDev&theme=react-dark&hide_border=true&bg_color=0D1117&color=6C63FF&line=6C63FF&point=FFFFFF)](https://github.[...]
 
 </div>
 -->
