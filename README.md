@@ -83,15 +83,20 @@ const mayzr = {
 
 </div>
 
+<!--
 ## 🎵 Currently Vibing To
 
 <div align="center">
   
-<!-- Connect your Spotify account at: https://github.com/kittinan/spotify-github-profile -->
-<!-- Replace YOUR_SPOTIFY_USER_ID below with your actual Spotify user ID -->
+To enable Spotify integration:
+1. Visit https://github.com/kittinan/spotify-github-profile
+2. Follow the setup instructions to get your Spotify user ID
+3. Uncomment this section and replace YOUR_SPOTIFY_USER_ID with your actual ID
+
 [![Spotify](https://spotify-github-profile.vercel.app/api/view?uid=YOUR_SPOTIFY_USER_ID&cover_image=true&theme=default&show_offline=false&background_color=0d1117&interchange=false&bar_color=6c63ff&bar_color_cover=true)](https://github.com/kittinan/spotify-github-profile)
 
 </div>
+-->
 
 ## 🏆 GitHub Trophies
 
