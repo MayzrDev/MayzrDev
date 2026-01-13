@@ -87,7 +87,9 @@ const mayzr = {
 
 <div align="center">
   
-[![Spotify](https://spotify-github-profile.vercel.app/api/view?uid=31l5bph5muzwi3knapr6vfnbkeqi&cover_image=true&theme=default&show_offline=false&background_color=0d1117&interchange=false&bar_color=6c63ff&bar_color_cover=true)](https://github.com/kittinan/spotify-github-profile)
+<!-- Connect your Spotify account at: https://github.com/kittinan/spotify-github-profile -->
+<!-- Replace YOUR_SPOTIFY_USER_ID below with your actual Spotify user ID -->
+[![Spotify](https://spotify-github-profile.vercel.app/api/view?uid=YOUR_SPOTIFY_USER_ID&cover_image=true&theme=default&show_offline=false&background_color=0d1117&interchange=false&bar_color=6c63ff&bar_color_cover=true)](https://github.com/kittinan/spotify-github-profile)
 
 </div>
 
