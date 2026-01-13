@@ -6,18 +6,31 @@
 
 I'm currently focused on homelab automation projects — building and automating services for my home lab using tools like Home Assistant, Ansible for provisioning, Kubernetes on bare metal, and automated backup/monitoring workflows. I enjoy creating reliable, repeatable automation to run self-hosted services and infrastructure.
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack (compact)
 
 <div align="center">
+  <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;align-items:center;">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" height="20"/>
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" height="20"/>
+    <img src="https://img.shields.io/badge/C%23-3776AB?style=flat-square&logo=csharp&logoColor=white" height="20"/>
 
-| Languages | Frontend | Backend |
-|---:|:---:|:---:|
-| ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![C#](https://img.shields.io/badge/-Csharp-3776AB?style=for-the-badge&logo=c#&logoColor=white) | ![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black) ![Next.js](https://img.shields.io/badge/-Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white) ![Vue.js](https://img.shields.io/badge/-Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white) | ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) ![Express](https://img.shields.io/badge/-Express-000000?style=for-the-badge&logo=express&logoColor=white) |
+    <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" height="20"/>
+    <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white" height="20"/>
 
-| Database & Cloud | Tools & Others | Misc |
-|:---:|:---:|:---:|
-| ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/-Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white) ![Oracle SQL](https://img.shields.io/badge/-Oracle%20SQL-F80000?style=for-the-badge&logo=oracle&logoColor=white) ![SQL Server](https://img.shields.io/badge/-SQL%20Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white) ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) | ![Git](https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white) ![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Linux](https://img.shields.io/badge/-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) | ![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white) |
+    <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" height="20"/>
+    <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" height="20"/>
 
+    <img src="https://img.shields.io/badge/Oracle%20SQL-F80000?style=flat-square&logo=oracle&logoColor=white" height="20"/>
+    <img src="https://img.shields.io/badge/SQL%20Server-CC2927?style=flat-square&logo=microsoft-sql-server&logoColor=white" height="20"/>
+    <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" height="20"/>
+
+    <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" height="20"/>
+    <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" height="20"/>
+    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" height="20"/>
+    <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white" height="20"/>
+    <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" height="20"/>
+    <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat-square&logo=tailwind-css&logoColor=white" height="20"/>
+  </div>
 </div>
 
 ## 📊 GitHub Stats
@@ -42,33 +55,13 @@ I'm currently focused on homelab automation projects — building and automating
 
 </div>
 
-<!--
-## 🏆 GitHub Trophies
-
-<div align="center">
-  
-![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=MayzrDev&theme=radical&no-frame=true&no-bg=true&margin-w=4&row=1)
-
-</div>
--->
-
-<!--
-## 📈 Activity Graph
-
-<div align="center">
-  
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=MayzrDev&theme=react-dark&hide_border=true&bg_color=0D1117&color=6C63FF&line=6C63FF&point=FFFFFF)](https://github.[...]
-
-</div>
--->
-
 ## 💬 Let's Connect!
 
 <div align="center">
 
-[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MayzrDev)
-[![Email](https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mayzrdev@gmail.com)
-[![Portfolio](https://img.shields.io/badge/-Portfolio-6C63FF?style=for-the-badge&logo=google-chrome&logoColor=white)](https://mayzr.dev) (Coming soon)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/MayzrDev)
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:mayzrdev@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-6C63FF?style=flat-square&logo=google-chrome&logoColor=white)](https://mayzr.dev) (Coming soon)
 
 </div>
 
