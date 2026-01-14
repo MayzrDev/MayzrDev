@@ -9,12 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write # needed to push changes back to the repository
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: true # so we can push back
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -29,7 +29,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_ACTOR: ${{ github.actor }}
           TARGET_USER: "MayzrDev" # change if you want a different username
-          MAX_REPOS: "30"
+          MAX_REPOS: "30" # number of repos to include
         run: |
           node .github/scripts/generate-contribs.js
 
@@ -37,7 +37,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # stage all SVGs in .github/contribs/ plus README.md
+          # stage all generated SVGs plus README.md
           git add .github/contribs README.md || true
           if ! git diff --staged --quiet; then
             echo "Changes detected, committing..."
@@ -46,3 +46,4 @@ jobs:
             git push
           else
             echo "No changes to commit"
+          fi
