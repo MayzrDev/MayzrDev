@@ -31,15 +31,14 @@ jobs:
         run: |
           node .github/scripts/generate-contribs.js
 
-      - name: Show diff
-        run: git --no-pager --no-color diff --staged || true
-
       - name: Commit & push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .github/contribs.svg README.md || true
           if ! git diff --staged --quiet; then
+            echo "Changes detected, committing..."
+            git --no-pager diff --staged --stat
             git commit -m "chore: update contributions SVG"
             git push
           else

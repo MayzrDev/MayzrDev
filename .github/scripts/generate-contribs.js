@@ -88,7 +88,7 @@ function buildSvg(repos) {
   const height = padding * 2 + rows * iconSize + (rows - 1) * gap;
 
   // Start SVG
-  let svg = `<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg"\n     xmlns:xlink="http://www.w3.org/1999/xlink"\n     width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">\n  <style>\n    .repo-image { rx: 12; ry: 12; }\n    .repo-link { cursor: pointer; }\n    .hover { transition: transform 0.12s ease-in-out; }\n  </style>\n`;
+  let svg = `<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg"\n     xmlns:xlink="http://www.w3.org/1999/xlink"\n     width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">\n  <style>\n    .repo-image { rx: 12; ry: 12; }\n    .repo-link { cursor: pointer; }\n  </style>\n`;
 
   // For each repo render an <a> with embedded <image>
   repos.forEach((r, idx) => {
@@ -142,7 +142,8 @@ function injectIntoReadme(svgRelativePath) {
     console.log(`Fetching up to ${maxRepos} repositories contributed to by ${username}`);
     const repos = await fetchRepos(username, maxRepos);
     if (!repos || repos.length === 0) {
-      console.log('No contributed repositories found.');
+      console.log('No contributed repositories found. Skipping SVG generation.');
+      process.exit(0);
     }
 
     const svg = buildSvg(repos);
