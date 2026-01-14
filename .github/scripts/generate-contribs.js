@@ -1,7 +1,7 @@
 /**
- * Generates individual SVGs for repositories the TARGET_USER has contributed to
+ * Generates individual SVGs for repositories the TARGET_USER has contributed to via PRs only
  * (excluding repos they own), saves them in .github/contribs/<repo>.svg,
- * and injects them into README.md between markers.
+ * and injects them directly into README.md between markers.
  *
  * Requires:
  *   - env.GITHUB_TOKEN
@@ -32,7 +32,7 @@ async function fetchRepos(user, limit) {
   const query = `
     query($login: String!, $limit: Int!) {
       user(login: $login) {
-        repositoriesContributedTo(first: $limit, contributionTypes: [COMMIT, PULL_REQUEST, ISSUE]) {
+        repositoriesContributedTo(first: $limit, contributionTypes: [PULL_REQUEST]) {
           nodes {
             name
             url
@@ -78,9 +78,8 @@ function escapeXml(s = '') {
 }
 
 function buildSvg(repo) {
-  const size = 128; // one large icon per SVG
+  const size = 128;
   const padding = 16;
-
   const title = escapeXml(`${repo.owner.login}/${repo.name}${repo.description ? ' — ' + repo.description : ''}`);
   const avatar = repo.owner.avatarUrl + '&s=256';
 
@@ -104,10 +103,7 @@ function buildSvg(repo) {
 
 function injectIntoReadme(repos) {
   const readmePath = path.join(process.cwd(), 'README.md');
-  if (!fs.existsSync(readmePath)) {
-    console.warn('README.md not found, skipping injection.');
-    return;
-  }
+  if (!fs.existsSync(readmePath)) return;
 
   let content = fs.readFileSync(readmePath, 'utf8');
 
@@ -117,30 +113,33 @@ function injectIntoReadme(repos) {
   const endIndex = content.indexOf(endMarker);
 
   if (startIndex === -1 || endIndex === -1 || endIndex < startIndex) {
-    console.warn('Markers not found in README.md. Please add these markers:');
-    console.warn(startMarker);
-    console.warn(endMarker);
+    console.warn('Markers not found in README.md.');
     return;
   }
 
-  // Generate Markdown with all SVGs side by side
-  const injection = `\n<p align="center">\n${repos.map(r => {
-    const safeName = r.name.replace(/[^a-z0-9-_]/gi, '_');
-    const svgPath = `./.github/contribs/${safeName}.svg`;
-    return `  <a href="${r.url}" target="_blank" rel="noopener noreferrer"><img src="${svgPath}" alt="${r.owner.login}/${r.name}" width="64" /></a>`;
-  }).join('\n')}\n</p>\n`;
+  // Read all SVGs and embed them inline
+  const injection = '\n<p align="center">\n' +
+    repos.map(r => {
+      const safeName = r.name.replace(/[^a-z0-9-_]/gi, '_');
+      const svgPath = path.join(process.cwd(), '.github', 'contribs', `${safeName}.svg`);
+      if (fs.existsSync(svgPath)) {
+        const svgContent = fs.readFileSync(svgPath, 'utf8');
+        return `<a href="${r.url}" target="_blank" rel="noopener noreferrer">\n${svgContent}\n</a>`;
+      }
+      return '';
+    }).join('\n') +
+    '\n</p>\n';
 
   const before = content.slice(0, startIndex + startMarker.length);
   const after = content.slice(endIndex);
-
   const newContent = `${before}\n${injection}\n${after}`;
   fs.writeFileSync(readmePath, newContent, 'utf8');
-  console.log('Injected contributed repos into README.md');
+  console.log('Injected SVG icons into README.md');
 }
 
 (async () => {
   try {
-    console.log(`Fetching up to ${maxRepos} repositories contributed to by ${username}`);
+    console.log(`Fetching up to ${maxRepos} repositories contributed to by ${username} via PRs`);
     const repos = await fetchRepos(username, maxRepos);
 
     if (!repos || repos.length === 0) {
@@ -160,7 +159,6 @@ function injectIntoReadme(repos) {
     }
 
     injectIntoReadme(repos);
-
     console.log('Done.');
   } catch (err) {
     console.error('Error:', err);
