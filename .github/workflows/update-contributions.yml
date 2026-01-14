@@ -2,7 +2,7 @@ name: Update Contributions SVG
 
 on:
   schedule:
-    - cron: "0 6 * * 0" # once a week (UTC). Edit as you like.
+    - cron: "0 6 * * 0" # once a week (UTC). Edit as needed
   workflow_dispatch: {} # manual run
 
 jobs:
@@ -14,22 +14,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          persist-credentials: true # so we can push back
+          persist-credentials: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Install dependencies (none required for this script)
+      - name: Install dependencies (none required)
         run: npm ci || echo "no package.json found, continuing"
 
-      - name: Run generator
+      - name: Run contributions generator
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_ACTOR: ${{ github.actor }}
           TARGET_USER: "MayzrDev" # change if you want a different username
-          MAX_REPOS: "30" # number of repos to include
+          MAX_REPOS: "30"
         run: |
           node .github/scripts/generate-contribs.js
 
