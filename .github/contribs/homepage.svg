@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="160" height="160"
+     viewBox="0 0 160 160">
+  <a xlink:href="https://github.com/gethomepage/homepage" target="_blank" rel="noopener noreferrer">
+    <g transform="translate(16, 16)">
+      <title>gethomepage/homepage — A highly customizable homepage (or startpage / application dashboard) with Docker and service API integrations.</title>
+      <clipPath id="cp">
+        <rect width="128" height="128" rx="16" ry="16"/>
+      </clipPath>
+      <image x="0" y="0" width="128" height="128" xlink:href="https://avatars.githubusercontent.com/u/122929872?v=4&amp;s=256" clip-path="url(#cp)" />
+      <rect x="0" y="0" width="128" height="128" rx="16" ry="16" fill="none" stroke="#e6e6e6" />
+    </g>
+  </a>
+</svg>

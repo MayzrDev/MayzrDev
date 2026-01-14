@@ -41,13 +41,60 @@ Right now that means automating self-hosted services with **Docker**, tinkering 
 <!-- CONTRIBUTIONS:START -->
 
 <p align="center">
-  <a href="https://github.com/christoabrown/group-ironmen" target="_blank" rel="noopener noreferrer"><img src="./.github/contribs/group-ironmen.svg" alt="christoabrown/group-ironmen" width="64" /></a>
-  <a href="https://github.com/gethomepage/homepage" target="_blank" rel="noopener noreferrer"><img src="./.github/contribs/homepage.svg" alt="gethomepage/homepage" width="64" /></a>
-  <a href="https://github.com/fscorrupt/posterizarr" target="_blank" rel="noopener noreferrer"><img src="./.github/contribs/posterizarr.svg" alt="fscorrupt/posterizarr" width="64" /></a>
-  <a href="https://github.com/community-scripts/ProxmoxVE" target="_blank" rel="noopener noreferrer"><img src="./.github/contribs/ProxmoxVE.svg" alt="community-scripts/ProxmoxVE" width="64" /></a>
-  <a href="https://github.com/Doezer/Questarr" target="_blank" rel="noopener noreferrer"><img src="./.github/contribs/Questarr.svg" alt="Doezer/Questarr" width="64" /></a>
-  <a href="https://github.com/nairdahh/Anchorr" target="_blank" rel="noopener noreferrer"><img src="./.github/contribs/Anchorr.svg" alt="nairdahh/Anchorr" width="64" /></a>
-  <a href="https://github.com/connorgallopo/Tracearr" target="_blank" rel="noopener noreferrer"><img src="./.github/contribs/Tracearr.svg" alt="connorgallopo/Tracearr" width="64" /></a>
+<a href="https://github.com/gethomepage/homepage" target="_blank" rel="noopener noreferrer">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="160" height="160"
+     viewBox="0 0 160 160">
+  <a xlink:href="https://github.com/gethomepage/homepage" target="_blank" rel="noopener noreferrer">
+    <g transform="translate(16, 16)">
+      <title>gethomepage/homepage — A highly customizable homepage (or startpage / application dashboard) with Docker and service API integrations.</title>
+      <clipPath id="cp">
+        <rect width="128" height="128" rx="16" ry="16"/>
+      </clipPath>
+      <image x="0" y="0" width="128" height="128" xlink:href="https://avatars.githubusercontent.com/u/122929872?v=4&amp;s=256" clip-path="url(#cp)" />
+      <rect x="0" y="0" width="128" height="128" rx="16" ry="16" fill="none" stroke="#e6e6e6" />
+    </g>
+  </a>
+</svg>
+</a>
+<a href="https://github.com/Doezer/Questarr" target="_blank" rel="noopener noreferrer">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="160" height="160"
+     viewBox="0 0 160 160">
+  <a xlink:href="https://github.com/Doezer/Questarr" target="_blank" rel="noopener noreferrer">
+    <g transform="translate(16, 16)">
+      <title>Doezer/Questarr — Video games manager for -arr users</title>
+      <clipPath id="cp">
+        <rect width="128" height="128" rx="16" ry="16"/>
+      </clipPath>
+      <image x="0" y="0" width="128" height="128" xlink:href="https://avatars.githubusercontent.com/u/11655673?v=4&amp;s=256" clip-path="url(#cp)" />
+      <rect x="0" y="0" width="128" height="128" rx="16" ry="16" fill="none" stroke="#e6e6e6" />
+    </g>
+  </a>
+</svg>
+</a>
+<a href="https://github.com/connorgallopo/Tracearr" target="_blank" rel="noopener noreferrer">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="160" height="160"
+     viewBox="0 0 160 160">
+  <a xlink:href="https://github.com/connorgallopo/Tracearr" target="_blank" rel="noopener noreferrer">
+    <g transform="translate(16, 16)">
+      <title>connorgallopo/Tracearr — Real-time monitoring for Plex, Jellyfin, and Emby servers. Track streams, analyze playback, and detect account sharing from a single dashboard.</title>
+      <clipPath id="cp">
+        <rect width="128" height="128" rx="16" ry="16"/>
+      </clipPath>
+      <image x="0" y="0" width="128" height="128" xlink:href="https://avatars.githubusercontent.com/u/21372032?u=6101347124345899d3c7a15069461977b95cd24f&amp;v=4&amp;s=256" clip-path="url(#cp)" />
+      <rect x="0" y="0" width="128" height="128" rx="16" ry="16" fill="none" stroke="#e6e6e6" />
+    </g>
+  </a>
+</svg>
+</a>
 </p>
 
 <!-- CONTRIBUTIONS:END -->
