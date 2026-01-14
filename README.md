@@ -40,6 +40,13 @@ Right now that means automating self-hosted services with **Docker**, tinkering 
 ## 🤝 Contributions
 
 <!-- CONTRIBUTIONS:START -->
+
+<p align="center">
+  <a href="https://github.com/MayzrDev" target="_blank" rel="noopener noreferrer">
+    <img src="./.github/contribs.svg" alt="Repositories MayzrDev contributed to" />
+  </a>
+</p>
+
 <!-- CONTRIBUTIONS:END -->
 
 ## 🚀 Featured Projects

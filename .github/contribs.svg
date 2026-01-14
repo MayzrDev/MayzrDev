@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="568" height="88" viewBox="0 0 568 88">
+  <style>
+    .repo-image { rx: 12; ry: 12; }
+    .repo-link { cursor: pointer; }
+  </style>
+
+  <a xlink:href="https://github.com/christoabrown/group-ironmen" target="_blank" rel="noopener noreferrer">
+    <g transform="translate(12, 12)" class="repo-link">
+      <title>christoabrown/group-ironmen — Site and server for the groupiron.men</title>
+      <clipPath id="cp0">
+        <rect width="64" height="64" rx="12" ry="12"/>
+      </clipPath>
+      <image x="0" y="0" width="64" height="64" xlink:href="https://avatars.githubusercontent.com/u/833253?u=8470e23440d3e8c1646128701584c6943a2623e5&amp;v=4&amp;s=256" clip-path="url(#cp0)" />
+      <!-- subtle border -->
+      <rect x="0" y="0" width="64" height="64" rx="12" ry="12" fill="none" stroke="#e6e6e6" />
+    </g>
+  </a>
+
+  <a xlink:href="https://github.com/gethomepage/homepage" target="_blank" rel="noopener noreferrer">
+    <g transform="translate(92, 12)" class="repo-link">
+      <title>gethomepage/homepage — A highly customizable homepage (or startpage / application dashboard) with Docker and service API integrations.</title>
+      <clipPath id="cp1">
+        <rect width="64" height="64" rx="12" ry="12"/>
+      </clipPath>
+      <image x="0" y="0" width="64" height="64" xlink:href="https://avatars.githubusercontent.com/u/122929872?v=4&amp;s=256" clip-path="url(#cp1)" />
+      <!-- subtle border -->
+      <rect x="0" y="0" width="64" height="64" rx="12" ry="12" fill="none" stroke="#e6e6e6" />
+    </g>
+  </a>
+
+  <a xlink:href="https://github.com/fscorrupt/posterizarr" target="_blank" rel="noopener noreferrer">
+    <g transform="translate(172, 12)" class="repo-link">
+      <title>fscorrupt/posterizarr — 🖼️ Automated poster maker for Plex/Jellyfin/Emby.</title>
+      <clipPath id="cp2">
+        <rect width="64" height="64" rx="12" ry="12"/>
+      </clipPath>
+      <image x="0" y="0" width="64" height="64" xlink:href="https://avatars.githubusercontent.com/u/45659314?u=49197ee2a611cd3d5571450f920fb3c741f77414&amp;v=4&amp;s=256" clip-path="url(#cp2)" />
+      <!-- subtle border -->
+      <rect x="0" y="0" width="64" height="64" rx="12" ry="12" fill="none" stroke="#e6e6e6" />
+    </g>
+  </a>
+
+  <a xlink:href="https://github.com/community-scripts/ProxmoxVE" target="_blank" rel="noopener noreferrer">
+    <g transform="translate(252, 12)" class="repo-link">
+      <title>community-scripts/ProxmoxVE — Proxmox VE Helper-Scripts (Community Edition) </title>
+      <clipPath id="cp3">
+        <rect width="64" height="64" rx="12" ry="12"/>
+      </clipPath>
+      <image x="0" y="0" width="64" height="64" xlink:href="https://avatars.githubusercontent.com/u/187033296?v=4&amp;s=256" clip-path="url(#cp3)" />
+      <!-- subtle border -->
+      <rect x="0" y="0" width="64" height="64" rx="12" ry="12" fill="none" stroke="#e6e6e6" />
+    </g>
+  </a>
+
+  <a xlink:href="https://github.com/Doezer/Questarr" target="_blank" rel="noopener noreferrer">
+    <g transform="translate(332, 12)" class="repo-link">
+      <title>Doezer/Questarr — Video games manager for -arr users</title>
+      <clipPath id="cp4">
+        <rect width="64" height="64" rx="12" ry="12"/>
+      </clipPath>
+      <image x="0" y="0" width="64" height="64" xlink:href="https://avatars.githubusercontent.com/u/11655673?v=4&amp;s=256" clip-path="url(#cp4)" />
+      <!-- subtle border -->
+      <rect x="0" y="0" width="64" height="64" rx="12" ry="12" fill="none" stroke="#e6e6e6" />
+    </g>
+  </a>
+
+  <a xlink:href="https://github.com/nairdahh/Anchorr" target="_blank" rel="noopener noreferrer">
+    <g transform="translate(412, 12)" class="repo-link">
+      <title>nairdahh/Anchorr — Discord bot for requesting movies/TV and receiving notifications when items are added to your media server.</title>
+      <clipPath id="cp5">
+        <rect width="64" height="64" rx="12" ry="12"/>
+      </clipPath>
+      <image x="0" y="0" width="64" height="64" xlink:href="https://avatars.githubusercontent.com/u/65923243?u=10ab05639330ba6778a767ed16cccd7f31908ec5&amp;v=4&amp;s=256" clip-path="url(#cp5)" />
+      <!-- subtle border -->
+      <rect x="0" y="0" width="64" height="64" rx="12" ry="12" fill="none" stroke="#e6e6e6" />
+    </g>
+  </a>
+
+  <a xlink:href="https://github.com/connorgallopo/Tracearr" target="_blank" rel="noopener noreferrer">
+    <g transform="translate(492, 12)" class="repo-link">
+      <title>connorgallopo/Tracearr — Real-time monitoring for Plex, Jellyfin, and Emby servers. Track streams, analyze playback, and detect account sharing from a single dashboard.</title>
+      <clipPath id="cp6">
+        <rect width="64" height="64" rx="12" ry="12"/>
+      </clipPath>
+      <image x="0" y="0" width="64" height="64" xlink:href="https://avatars.githubusercontent.com/u/21372032?u=6101347124345899d3c7a15069461977b95cd24f&amp;v=4&amp;s=256" clip-path="url(#cp6)" />
+      <!-- subtle border -->
+      <rect x="0" y="0" width="64" height="64" rx="12" ry="12" fill="none" stroke="#e6e6e6" />
+    </g>
+  </a>
+</svg>
