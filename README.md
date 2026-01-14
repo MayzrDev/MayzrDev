@@ -39,6 +39,9 @@ Right now that means automating self-hosted services with **Docker**, tinkering 
 
 ## 🤝 Contributions
 
+<!-- CONTRIBUTIONS:START -->
+<!-- CONTRIBUTIONS:END -->
+
 ## 🚀 Featured Projects
 
 <div align="center">
