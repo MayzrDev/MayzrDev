@@ -41,9 +41,13 @@ Right now that means automating self-hosted services with **Docker**, tinkering 
 <!-- CONTRIBUTIONS:START -->
 
 <p align="center">
-  <a href="https://github.com/MayzrDev" target="_blank" rel="noopener noreferrer">
-    <img src="./.github/contribs.svg" alt="Repositories MayzrDev contributed to" />
-  </a>
+  <a href="https://github.com/christoabrown/group-ironmen" target="_blank" rel="noopener noreferrer"><img src="./.github/contribs/group-ironmen.svg" alt="christoabrown/group-ironmen" width="64" /></a>
+  <a href="https://github.com/gethomepage/homepage" target="_blank" rel="noopener noreferrer"><img src="./.github/contribs/homepage.svg" alt="gethomepage/homepage" width="64" /></a>
+  <a href="https://github.com/fscorrupt/posterizarr" target="_blank" rel="noopener noreferrer"><img src="./.github/contribs/posterizarr.svg" alt="fscorrupt/posterizarr" width="64" /></a>
+  <a href="https://github.com/community-scripts/ProxmoxVE" target="_blank" rel="noopener noreferrer"><img src="./.github/contribs/ProxmoxVE.svg" alt="community-scripts/ProxmoxVE" width="64" /></a>
+  <a href="https://github.com/Doezer/Questarr" target="_blank" rel="noopener noreferrer"><img src="./.github/contribs/Questarr.svg" alt="Doezer/Questarr" width="64" /></a>
+  <a href="https://github.com/nairdahh/Anchorr" target="_blank" rel="noopener noreferrer"><img src="./.github/contribs/Anchorr.svg" alt="nairdahh/Anchorr" width="64" /></a>
+  <a href="https://github.com/connorgallopo/Tracearr" target="_blank" rel="noopener noreferrer"><img src="./.github/contribs/Tracearr.svg" alt="connorgallopo/Tracearr" width="64" /></a>
 </p>
 
 <!-- CONTRIBUTIONS:END -->
