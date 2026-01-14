@@ -2,10 +2,9 @@
 
 ## 🔭 Currently working on
 
-Busy breaking and rebuilding my homelab
+Contributing to the homelab OSS space, breaking and rebuilding my own homelab
 
 Right now that means automating self-hosted services with **Docker**, tinkering with the **\*arr stack** for media workflows, managing storage with **TrueNAS**, and doing it all on **Proxmox/Linux**
-
 
 ## 🛠️ Tech Stack
 
