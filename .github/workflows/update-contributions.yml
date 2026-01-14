@@ -1,0 +1,47 @@
+name: Update Contributions SVG
+
+on:
+  schedule:
+    - cron: "0 6 * * 0" # once a week (UTC). Edit as you like.
+  workflow_dispatch: {} # manual run
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true # so we can push back
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies (none required for this script)
+        run: npm ci || echo "no package.json found, continuing"
+
+      - name: Run generator
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTOR: ${{ github.actor }}
+          TARGET_USER: "MayzrDev" # change if you want a different username
+          MAX_REPOS: "30" # number of repos to include
+        run: |
+          node .github/scripts/generate-contribs.js
+
+      - name: Show diff
+        run: git --no-pager --no-color diff --staged || true
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/contribs.svg README.md || true
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: update contributions SVG"
+            git push
+          else
+            echo "No changes to commit"
+          fi
