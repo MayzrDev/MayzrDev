@@ -39,19 +39,6 @@ Right now that means automating self-hosted services with **Docker**, tinkering 
 ## 🤝 Contributions
 
 <!-- CONTRIBUTIONS:START -->
-
-<p align="center">
-<a href="https://github.com/gethomepage/homepage" target="_blank" rel="noopener noreferrer">
-  <img src="./.github/contribs/homepage.svg" alt="gethomepage/homepage" width="64" height="64" style="margin:4px;" />
-</a>
-<a href="https://github.com/Doezer/Questarr" target="_blank" rel="noopener noreferrer">
-  <img src="./.github/contribs/Questarr.svg" alt="Doezer/Questarr" width="64" height="64" style="margin:4px;" />
-</a>
-<a href="https://github.com/connorgallopo/Tracearr" target="_blank" rel="noopener noreferrer">
-  <img src="./.github/contribs/Tracearr.svg" alt="connorgallopo/Tracearr" width="64" height="64" style="margin:4px;" />
-</a>
-</p>
-
 <!-- CONTRIBUTIONS:END -->
 
 ## 🚀 Featured Projects
