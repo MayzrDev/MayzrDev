@@ -8,7 +8,7 @@
     <clipPath id="cp">
       <rect width="128" height="128" rx="16" ry="16"/>
     </clipPath>
-    <image x="0" y="0" width="128" height="128" xlink:href="https://avatars.githubusercontent.com/u/122929872?v=4&amp;s=256" clip-path="url(#cp)" />
+    <image x="0" y="0" width="128" height="128" xlink:href="https://avatars.githubusercontent.com/u/122929872?v=4" clip-path="url(#cp)" />
     <rect x="0" y="0" width="128" height="128" rx="16" ry="16" fill="none" stroke="#e6e6e6" />
   </g>
 </svg>
