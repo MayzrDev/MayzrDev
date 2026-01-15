@@ -1,12 +1,6 @@
 /**
- * Generates per-repo SVGs for repositories the TARGET_USER has contributed to via PRs only
- * (excluding repos they own), saves them in .github/contribs/<repo>.svg,
- * and injects them into README.md as <img> icons (64px) in a gallery layout.
- *
- * Avatar fallback order:
- *   1. repo-specific avatar (if available)
- *   2. owner avatar
- *   3. default placeholder
+ * Generates a gallery of repository avatars contributed to by TARGET_USER via PRs only,
+ * and injects it directly into README.md.
  *
  * Requires:
  *   - env.GITHUB_TOKEN
@@ -22,7 +16,7 @@ const GITHUB_GRAPHQL = 'https://api.github.com/graphql';
 const token = process.env.GITHUB_TOKEN;
 const username = process.env.TARGET_USER || process.env.GITHUB_ACTOR;
 const maxRepos = parseInt(process.env.MAX_REPOS || '24', 10);
-const PLACEHOLDER_AVATAR = 'https://avatars.githubusercontent.com/u/9919?s=256&v=4'; // GitHub octocat as fallback
+const PLACEHOLDER_AVATAR = 'https://avatars.githubusercontent.com/u/9919?s=64&v=4'; // fallback
 
 if (!token) {
   console.error('GITHUB_TOKEN is required in env');
@@ -77,32 +71,10 @@ async function fetchRepos(user, limit) {
   return data.data.user.repositoriesContributedTo.nodes.filter(r => r.owner.login !== user);
 }
 
-function escapeXml(s = '') {
+function escapeHtml(s = '') {
   return s.replace(/[&<>'"]/g, c =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&apos;', '"': '&quot;' })[c]
   );
-}
-
-function buildSvg(repo) {
-  const size = 128;
-  const padding = 16;
-  const title = escapeXml(`${repo.owner.login}/${repo.name}${repo.description ? ' — ' + repo.description : ''}`);
-  const avatar = repo.avatarUrl || repo.owner.avatarUrl || PLACEHOLDER_AVATAR;
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="${size + padding * 2}" height="${size + padding * 2}"
-     viewBox="0 0 ${size + padding * 2} ${size + padding * 2}">
-  <g transform="translate(${padding}, ${padding})">
-    <title>${title}</title>
-    <clipPath id="cp">
-      <rect width="${size}" height="${size}" rx="16" ry="16"/>
-    </clipPath>
-    <image x="0" y="0" width="${size}" height="${size}" xlink:href="${escapeXml(avatar)}" clip-path="url(#cp)" />
-    <rect x="0" y="0" width="${size}" height="${size}" rx="16" ry="16" fill="none" stroke="#e6e6e6" />
-  </g>
-</svg>`;
 }
 
 function injectIntoReadme(repos) {
@@ -121,13 +93,13 @@ function injectIntoReadme(repos) {
     return;
   }
 
-  // Inject a gallery of 64px icons using <img>
+  // Build gallery using direct avatar URLs
   const injection = '\n<p align="center">\n' +
     repos.map(r => {
-      const safeName = r.name.replace(/[^a-z0-9-_]/gi, '_');
-      const svgPath = `./.github/contribs/${safeName}.svg`;
+      const avatar = r.avatarUrl || r.owner.avatarUrl || PLACEHOLDER_AVATAR;
+      const title = escapeHtml(`${r.owner.login}/${r.name}${r.description ? ' — ' + r.description : ''}`);
       return `<a href="${r.url}" target="_blank" rel="noopener noreferrer">
-  <img src="${svgPath}" alt="${r.owner.login}/${r.name}" width="64" height="64" style="margin:4px;" />
+  <img src="${avatar}&s=64" alt="${title}" width="64" height="64" style="margin:4px;" />
 </a>`;
     }).join('\n') +
     '\n</p>\n';
@@ -136,7 +108,7 @@ function injectIntoReadme(repos) {
   const after = content.slice(endIndex);
   const newContent = `${before}\n${injection}\n${after}`;
   fs.writeFileSync(readmePath, newContent, 'utf8');
-  console.log('Injected repo icons gallery into README.md');
+  console.log('Injected repo icons gallery directly into README.md');
 }
 
 (async () => {
@@ -147,17 +119,6 @@ function injectIntoReadme(repos) {
     if (!repos || repos.length === 0) {
       console.log('No contributed repositories found (excluding own repos).');
       process.exit(0);
-    }
-
-    const contribDir = path.join(process.cwd(), '.github', 'contribs');
-    fs.mkdirSync(contribDir, { recursive: true });
-
-    for (const repo of repos) {
-      const svg = buildSvg(repo);
-      const safeName = repo.name.replace(/[^a-z0-9-_]/gi, '_');
-      const svgPath = path.join(contribDir, `${safeName}.svg`);
-      fs.writeFileSync(svgPath, svg, 'utf8');
-      console.log(`Wrote ${svgPath}`);
     }
 
     injectIntoReadme(repos);
