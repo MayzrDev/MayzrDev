@@ -1,8 +1,8 @@
-name: Update Contributions SVG
+name: Update Contributions Gallery
 
 on:
   schedule:
-    - cron: "0 6 * * 0" # once a week (UTC). Edit as needed
+    - cron: "0 6 * * 0" # once a week (UTC)
   workflow_dispatch: {} # manual run
 
 jobs:
@@ -33,17 +33,16 @@ jobs:
         run: |
           node .github/scripts/generate-contribs.js
 
-      - name: Commit & push if changed
+      - name: Commit & push README.md if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # stage all generated SVGs plus README.md
-          git add .github/contribs README.md || true
+          # stage only README.md
+          git add README.md
           if ! git diff --staged --quiet; then
-            echo "Changes detected, committing..."
+            echo "Changes detected in README.md, committing..."
             git --no-pager diff --staged --stat
-            git commit -m "chore: update contributions SVGs"
+            git commit -m "chore: update contributions gallery"
             git push
           else
             echo "No changes to commit"
-          fi
