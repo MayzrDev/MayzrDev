@@ -99,12 +99,12 @@ function injectIntoReadme(repos) {
       const avatar = r.avatarUrl || r.owner.avatarUrl || PLACEHOLDER_AVATAR;
       const title = escapeHtml(`${r.owner.login}/${r.name}${r.description ? ' — ' + r.description : ''}`);
       const prUrl = `${r.url}/pulls?q=is:pr+author:${encodeURIComponent(username)}`;
-      return `<a href="${prUrl}" target="_blank" rel="noopener noreferrer">
-  <img src="${avatar}&s=64" alt="${title}" width="64" height="64" style="margin:4px;" />
-</a>`;
+      return `<a href="${prUrl}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+    <img src="${avatar}&s=64" alt="${title}" width="64" height="64" style="margin:4px;" />
+  </a>`;
     }).join('\n') +
     '\n</p>\n';
-
+  
   const before = content.slice(0, startIndex + startMarker.length);
   const after = content.slice(endIndex);
   const newContent = `${before}\n${injection}\n${after}`;
