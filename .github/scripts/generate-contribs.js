@@ -93,16 +93,15 @@ function injectIntoReadme(repos) {
     return;
   }
 
-  // Build gallery using direct avatar URLs
-  // Note: GitHub Markdown sanitizes inline styles, so they cannot be used
+  // Build gallery using Markdown image links (no text decoration by default)
+  // Using Markdown syntax instead of HTML to avoid link underlines
   const injection = '\n<p align="center">\n' +
     repos.map(r => {
       const avatar = r.avatarUrl || r.owner.avatarUrl || PLACEHOLDER_AVATAR;
       const title = escapeHtml(`${r.owner.login}/${r.name}${r.description ? ' — ' + r.description : ''}`);
       const prUrl = `${r.url}/pulls?q=is:pr+author:${encodeURIComponent(username)}`;
-      return `<a href="${prUrl}" target="_blank" rel="noopener noreferrer">
-    <img src="${avatar}&s=64" alt="${title}" width="64" height="64" style="margin:4px;" />
-  </a>`;
+      // Use Markdown link syntax to avoid text decoration
+      return `[![${title}](${avatar}&s=64)](${prUrl})`;
     }).join('\n') +
     '\n</p>\n';
   

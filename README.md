@@ -41,15 +41,9 @@ Right now that means automating self-hosted services with **Docker**, tinkering 
 <!-- CONTRIBUTIONS:START -->
 
 <p align="center">
-<a href="https://github.com/gethomepage/homepage/pulls?q=is:pr+author:MayzrDev" target="_blank" rel="noopener noreferrer">
-    <img src="https://avatars.githubusercontent.com/u/122929872?v=4&s=64" alt="gethomepage/homepage — A highly customizable homepage (or startpage / application dashboard) with Docker and service API integrations." width="64" height="64" style="margin:4px;" />
-  </a>
-<a href="https://github.com/Doezer/Questarr/pulls?q=is:pr+author:MayzrDev" target="_blank" rel="noopener noreferrer">
-    <img src="https://avatars.githubusercontent.com/u/11655673?v=4&s=64" alt="Doezer/Questarr — Video games manager for -arr users" width="64" height="64" style="margin:4px;" />
-  </a>
-<a href="https://github.com/connorgallopo/Tracearr/pulls?q=is:pr+author:MayzrDev" target="_blank" rel="noopener noreferrer">
-    <img src="https://avatars.githubusercontent.com/u/21372032?u=6101347124345899d3c7a15069461977b95cd24f&v=4&s=64" alt="connorgallopo/Tracearr — Real-time monitoring for Plex, Jellyfin, and Emby servers. Track streams, analyze playback, and detect account sharing from a single dashboard." width="64" height="64" style="margin:4px;" />
-  </a>
+[![gethomepage/homepage — A highly customizable homepage (or startpage / application dashboard) with Docker and service API integrations.](https://avatars.githubusercontent.com/u/122929872?v=4&s=64)](https://github.com/gethomepage/homepage/pulls?q=is:pr+author:MayzrDev)
+[![Doezer/Questarr — Video games manager for -arr users](https://avatars.githubusercontent.com/u/11655673?v=4&s=64)](https://github.com/Doezer/Questarr/pulls?q=is:pr+author:MayzrDev)
+[![connorgallopo/Tracearr — Real-time monitoring for Plex, Jellyfin, and Emby servers. Track streams, analyze playback, and detect account sharing from a single dashboard.](https://avatars.githubusercontent.com/u/21372032?u=6101347124345899d3c7a15069461977b95cd24f&v=4&s=64)](https://github.com/connorgallopo/Tracearr/pulls?q=is:pr+author:MayzrDev)
 </p>
 
 <!-- CONTRIBUTIONS:END -->
