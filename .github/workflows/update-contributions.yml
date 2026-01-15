@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # needed to push changes back to the repository
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -22,13 +22,14 @@ jobs:
           node-version: 18
 
       - name: Install dependencies (none required)
-        run: npm ci || echo "no package.json found, continuing"
+        run: |
+          npm ci || echo "no package.json found, continuing"
 
       - name: Run contributions generator
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_ACTOR: ${{ github.actor }}
-          TARGET_USER: "MayzrDev" # change if you want a different username
+          TARGET_USER: "MayzrDev"
           MAX_REPOS: "30"
         run: |
           node .github/scripts/generate-contribs.js
@@ -37,7 +38,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # stage only README.md
           git add README.md
           if ! git diff --staged --quiet; then
             echo "Changes detected in README.md, committing..."
