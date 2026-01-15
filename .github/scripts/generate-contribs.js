@@ -3,6 +3,11 @@
  * (excluding repos they own), saves them in .github/contribs/<repo>.svg,
  * and injects them into README.md as <img> icons (64px) in a gallery layout.
  *
+ * Avatar fallback order:
+ *   1. repo-specific avatar (if available)
+ *   2. owner avatar
+ *   3. default placeholder
+ *
  * Requires:
  *   - env.GITHUB_TOKEN
  *   - env.TARGET_USER
@@ -17,6 +22,7 @@ const GITHUB_GRAPHQL = 'https://api.github.com/graphql';
 const token = process.env.GITHUB_TOKEN;
 const username = process.env.TARGET_USER || process.env.GITHUB_ACTOR;
 const maxRepos = parseInt(process.env.MAX_REPOS || '24', 10);
+const PLACEHOLDER_AVATAR = 'https://avatars.githubusercontent.com/u/9919?s=256&v=4'; // GitHub octocat as fallback
 
 if (!token) {
   console.error('GITHUB_TOKEN is required in env');
@@ -81,7 +87,7 @@ function buildSvg(repo) {
   const size = 128;
   const padding = 16;
   const title = escapeXml(`${repo.owner.login}/${repo.name}${repo.description ? ' — ' + repo.description : ''}`);
-  const avatar = repo.owner.avatarUrl + '&s=256';
+  const avatar = repo.avatarUrl || repo.owner.avatarUrl || PLACEHOLDER_AVATAR;
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
