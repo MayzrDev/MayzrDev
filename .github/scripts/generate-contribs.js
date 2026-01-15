@@ -98,7 +98,8 @@ function injectIntoReadme(repos) {
     repos.map(r => {
       const avatar = r.avatarUrl || r.owner.avatarUrl || PLACEHOLDER_AVATAR;
       const title = escapeHtml(`${r.owner.login}/${r.name}${r.description ? ' — ' + r.description : ''}`);
-      return `<a href="${r.url}" target="_blank" rel="noopener noreferrer">
+      const prUrl = `${r.url}/pulls?q=is:pr+author:${username}`;
+      return `<a href="${prUrl}" target="_blank" rel="noopener noreferrer">
   <img src="${avatar}&s=64" alt="${title}" width="64" height="64" style="margin:4px;" />
 </a>`;
     }).join('\n') +
